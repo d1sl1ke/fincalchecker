@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-echo >> /tmp/final_check
+echo > /tmp/final_check
 echo "Crontab Rules">> /tmp/final_check
 crontab -l >> /tmp/final_check
 echo >> /tmp/final_check
