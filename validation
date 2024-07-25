@@ -1,0 +1,42 @@
+#!/bin/bash
+
+echo > /tmp/validation
+lscpu  | grep Thread>> /tmp/validation
+echo >> /tmp/validation
+cat /etc/centos-release>> /tmp/validation
+echo >> /tmp/validation
+locale>> /tmp/validation
+echo >> /tmp/validation
+grep MemTotal /proc/meminfo>> /tmp/validation
+echo >> /tmp/validation
+getenforce>> /tmp/validation
+echo >> /tmp/validation
+timedatectl>> /tmp/validation
+echo >> /tmp/validation
+date>> /tmp/validation
+lsblk>> /tmp/validation
+echo >> /tmp/validation
+cat /etc/fstab>> /tmp/validation
+echo >> /tmp/validation
+mount | grep sda>> /tmp/validation
+echo >> /tmp/validation
+df -h>> /tmp/validation
+echo >> /tmp/validation
+
+mount | grep veos>> /tmp/validation
+echo >> /tmp/validation
+mount | grep '/mnt/dump/dpi'>> /tmp/validation
+echo >> /tmp/validation
+ip -4 a>> /tmp/validation
+echo >> /tmp/validation
+ip l | grep enp>> /tmp/validation
+echo >> /tmp/validation
+lspci -k | grep Eth>> /tmp/validation
+echo >> /tmp/validation
+ip l | grep enp | wc -l>>/tmp/validation
+echo >> /tmp/validation
+ls -l /sys/class/net/>> /tmp/validation
+echo >> /tmp/validation
+hostname>> /tmp/validation
+echo >> /tmp/validation
+cat /sys/devices/virtual/dmi/id/product_uuid>> /tmp/validation
